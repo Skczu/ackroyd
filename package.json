@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "dev": "parcel ./src/pages/index.html"
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
+    "prettier": "2.5.1"
+  },
+  "dependencies": {
+    "parcel": "^2.0.1"
+  }
+}
