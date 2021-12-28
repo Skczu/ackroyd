@@ -5,6 +5,8 @@
   --light-blue: #e6ebfe;
   --heading: #212121;
   --paragraph: #383838;
+  --image: #e5e5e5;
+  --active-cover-btn: #a1a1a1;
   --subscribe-button: #fec48a;
   --subscribe-text: #571b0f;
   --seperator: #f39130;
@@ -51,14 +53,16 @@ nav {
 .nav-list {
   display: flex;
   flex-direction: row;
-  height: 100%;
   gap: 1rem;
+  height: 100%;
   list-style: none;
 }
 
 .nav-li {
   display: flex;
   align-items: center;
+  height: 100%;
+  border-bottom: 0.25rem solid transparent;
 }
 
 .nav-active-link {
@@ -106,7 +110,6 @@ nav {
 
 .cover-container {
   aspect-ratio: 1.7 / 1;
-  margin-bottom: 4rem;
 }
 
 .cover {
@@ -114,14 +117,33 @@ nav {
   height: 100%;
   width: 100%;
   border-radius: 0.5rem;
-  background: #e5e5e5;
+  background: var(--image);
+}
+
+.cover-btn-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  margin: 1rem auto 4rem;
+}
+
+.cover-btn {
+  height: 1rem;
+  width: 2.25rem;
+  background: var(--image);
+  border-radius: 0.25rem;
+  border: none;
+}
+
+.active-cover-btn {
+  background: var(--active-cover-btn);
 }
 
 .secondary-image {
   aspect-ratio: 1.97 / 1;
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
-  background: #e5e5e5;
+  background: var(--image);
 }
 
 .newsletter-heading {
