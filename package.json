@@ -7,9 +7,10 @@
     "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.4",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "parcel": "^2.0.1"
   },
   "dependencies": {
-    "parcel": "^2.0.1"
+    "ramda": "^0.27.1"
   }
 }

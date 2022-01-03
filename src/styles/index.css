@@ -3,7 +3,7 @@ body {
 }
 
 p {
-  font: 1rem/1.5rem "Lato", sans-serif;
+  font: 1rem/1.5rem 'Lato', sans-serif;
   color: var(--paragraph);
 }
 
@@ -19,7 +19,7 @@ nav {
 }
 
 .heading {
-  font: 700 1.5rem "Montserrat", sans-serif;
+  font: 700 1.5rem 'Montserrat', sans-serif;
   color: var(--dark-blue);
 }
 
@@ -49,7 +49,7 @@ nav {
 .nav-item {
   color: var(--nav-links);
   text-decoration: none;
-  font: 0.75rem "Lato", sans-serif;
+  font: 0.75rem 'Lato', sans-serif;
 }
 
 .main {
@@ -60,7 +60,7 @@ nav {
 .primary-section,
 .secondary-section {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   margin-bottom: 3rem;
 }
 
@@ -70,7 +70,7 @@ nav {
 }
 
 .section-heading {
-  font: 1.125rem "Montserrat", sans-serif;
+  font: 1.125rem 'Montserrat', sans-serif;
   color: var(--heading);
 }
 
@@ -124,7 +124,7 @@ nav {
 }
 
 .newsletter-heading {
-  font: 1rem "Montserrat", sans-serif;
+  font: 1rem 'Montserrat', sans-serif;
   text-align: center;
   margin-bottom: 1rem;
   color: var(--heading);
@@ -167,7 +167,7 @@ nav {
 }
 
 .newsletter-input::placeholder {
-  font: 0.625rem "Lato", sans-serif;
+  font: 0.625rem 'Lato', sans-serif;
 }
 
 .newsletter-button {
@@ -183,7 +183,7 @@ nav {
 }
 
 .newsletter-subscribe {
-  font: 0.625rem "Lato", sans-serif;
+  font: 0.625rem 'Lato', sans-serif;
   color: var(--subscribe-text);
   padding-left: 1rem;
 }
@@ -208,7 +208,7 @@ nav {
   color: var(--light-blue);
   margin: 1rem 0;
   font-size: 1.25rem;
-  font: 0.875rem "Lato", sans-serif;
+  font: 0.875rem 'Lato', sans-serif;
 }
 
 .footer-links {
@@ -219,7 +219,7 @@ nav {
 }
 
 .footer-link {
-  font: 0.625rem "Lato", sans-serif;
+  font: 0.625rem 'Lato', sans-serif;
   color: var(--footer-links);
   text-decoration: underline;
 }
@@ -389,7 +389,7 @@ nav {
   }
 
   .cover {
-    height: 22.8125rem;
+    height: 23rem;
     width: 100%;
   }
 
