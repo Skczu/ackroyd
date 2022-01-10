@@ -18,6 +18,8 @@ nav {
   padding: 0 1.5rem 0 1.125rem;
   background: var(--light-blue);
   transition: transform 0.4s;
+  /* to always stay on top of inserted images */
+  z-index: 10;
 }
 
 .nav-hidden {
@@ -94,12 +96,24 @@ nav {
   aspect-ratio: 1.7 / 1;
 }
 
+.cover-figure {
+  display: flex;
+  flex-direction: column;
+}
+
 .cover {
   display: block;
   height: 100%;
   width: 100%;
-  border-radius: 0.5rem;
   background: var(--image);
+}
+
+.cover-caption {
+  background-color: var(--heading);
+  color: var(--background);
+  font: 1rem 'Lato', sans-serif;
+  padding: 0.125rem;
+  text-align: center;
 }
 
 .cover-btn-container {
@@ -123,7 +137,6 @@ nav {
 
 .secondary-image {
   aspect-ratio: 1.97 / 1;
-  border-radius: 0.5rem;
   margin-bottom: 1.5rem;
   background: var(--image);
 }
@@ -300,7 +313,6 @@ nav {
 
   .secondary-cover {
     flex-grow: 1;
-    border-radius: 0.25rem;
     background: #e5e5e5;
   }
 
