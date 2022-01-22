@@ -93,7 +93,7 @@ nav {
 }
 
 .cover-container {
-  aspect-ratio: 1.7 / 1;
+  position: relative;
 }
 
 .cover-figure {
@@ -101,17 +101,24 @@ nav {
   flex-direction: column;
 }
 
-.cover {
+.secondary-cover-figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cover,
+.secondary-cover {
   display: block;
-  height: 100%;
   width: 100%;
+  aspect-ratio: 1.7 / 1;
   background: var(--image);
 }
 
 .cover-caption {
   background-color: var(--heading);
   color: var(--background);
-  font: 1rem 'Lato', sans-serif;
+  font: 0.625rem/0.75rem 'Lato', sans-serif;
   padding: 0.125rem;
   text-align: center;
 }
