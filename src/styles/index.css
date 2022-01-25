@@ -260,7 +260,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 7rem 4rem;
+    padding: 7rem 4rem 3rem;
   }
 
   .primary-section,
@@ -315,10 +315,27 @@ nav {
 
   .cover {
     width: 29.25rem;
+    height: 16.125rem;
+  }
+
+  .cover-caption {
+    padding: 0.25rem;
   }
 
   .secondary-cover {
-    flex-grow: 1;
+    aspect-ratio: unset;
+  }
+
+  .secondary-cover-figure {
+    position: static;
+  }
+
+  .secondary-cover-figure .cover-caption {
+    display: none;
+  }
+
+  .secondary-cover {
+    height: 7.9375rem;
     background: #e5e5e5;
   }
 
@@ -409,15 +426,25 @@ nav {
     flex-grow: 1.15;
     height: 35.25rem;
     width: 39rem;
+    margin-bottom: unset;
   }
 
   .cover {
-    height: 23rem;
+    height: 21.75rem;
     width: 100%;
   }
 
   .secondary-cover-container {
     flex-direction: row;
+  }
+
+  .secondary-cover-figure {
+    flex-grow: 1;
+  }
+
+  .secondary-cover {
+    height: 10.9375rem;
+    width: 18.75rem;
   }
 
   .secondary-image {
