@@ -96,15 +96,20 @@ nav {
   position: relative;
 }
 
-.cover-figure {
-  display: flex;
-  flex-direction: column;
+.cover-figure,
+.secondary-cover-figure {
+  transition: opacity 400ms, visibility 400ms;
 }
 
 .secondary-cover-figure {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .cover,

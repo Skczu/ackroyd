@@ -51,6 +51,56 @@ const styleFigure = (figure, isCover) => {
   return figure;
 };
 
+const slideshowPrep = (isActive, imgs, btns) => {
+  if (isActive) {
+    imgs.forEach((img, i) => {
+      img.classList.remove('hidden');
+      btns.item(i).classList.remove('active-cover-btn');
+    });
+  } else {
+    for (let i = 1; i < 3; i++) {
+      imgs.item(i).classList.add('hidden');
+    }
+    btns.item(0).classList.add('active-cover-btn');
+  }
+};
+
+const slideCover = (coverImages, btns) => {
+  for (let i = 0; i < 3; i++) {
+    if (!coverImages.item(i).classList.contains('hidden')) {
+      coverImages.item(i).classList.toggle('hidden');
+      coverImages.item(i === 2 ? 0 : i + 1).classList.toggle('hidden');
+      btns.item(i).classList.toggle('active-cover-btn');
+      btns.item(i === 2 ? 0 : i + 1).classList.toggle('active-cover-btn');
+      break;
+    }
+  }
+};
+
+const coverSlideshow = () => {
+  const mql = window.matchMedia('(min-width: 834px)');
+  const coverImages = document.querySelectorAll(
+    '.cover-figure, .secondary-cover-figure'
+  );
+  const slideShowBtns = document.querySelectorAll('.cover-btn');
+
+  let intervalID;
+  if (!mql.matches) {
+    intervalID = setInterval(slideCover, 5000, coverImages, slideShowBtns);
+    slideshowPrep(false, coverImages, slideShowBtns);
+  }
+
+  mql.addEventListener('change', (e) => {
+    if (e.matches) {
+      clearInterval(intervalID);
+      slideshowPrep(true, coverImages, slideShowBtns);
+    } else {
+      intervalID = setInterval(slideCover, 5000, coverImages, slideShowBtns);
+      slideshowPrep(false, coverImages, slideShowBtns);
+    }
+  });
+};
+
 const index = async () => {
   const coverSection = document.querySelector('.cover-container');
   const secondaryCoverSection = document.querySelector(
@@ -68,6 +118,8 @@ const index = async () => {
   styledSecondaries.map((figure) => {
     secondaryCoverSection.append(figure);
   });
+
+  coverSlideshow();
 };
 
 index();
