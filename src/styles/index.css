@@ -19,7 +19,7 @@ nav {
   background: var(--light-blue);
   transition: transform 0.4s;
   /* to always stay on top of inserted images */
-  z-index: 10;
+  z-index: 2;
 }
 
 .nav-hidden {

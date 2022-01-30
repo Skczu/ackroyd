@@ -1,17 +1,36 @@
-const shouldToggle = (isHidden, prevScrollY, scrollY) =>
-  scrollY < prevScrollY ? isHidden : !isHidden;
+function throttle(func, duration) {
+  let shouldWait = false;
 
-const toggleNav = () => {
-  let scrollY = window.scrollY;
+  return function (...args) {
+    if (!shouldWait) {
+      func.apply(this, args);
+      shouldWait = true;
 
-  if (shouldToggle(isHidden, prevScrollY, scrollY)) {
-    nav.classList.toggle('nav-hidden');
-    isHidden = !isHidden;
-  }
-  prevScrollY = scrollY;
+      setTimeout(function () {
+        shouldWait = false;
+      }, duration);
+    }
+  };
+}
+
+const initCallback = () => {
+  const nav = document.querySelector('.nav');
+  let prevScrollY = 0;
+
+  return throttle(function () {
+    let scrollY = window.scrollY;
+
+    if (nav.classList.contains('nav-hidden')) {
+      if (prevScrollY > scrollY) {
+        nav.classList.toggle('nav-hidden');
+      }
+    } else {
+      if (prevScrollY < scrollY) {
+        nav.classList.toggle('nav-hidden');
+      }
+    }
+    prevScrollY = scrollY;
+  }, 100);
 };
 
-const nav = document.querySelector('.nav');
-let isHidden = false,
-  prevScrollY = 0;
-document.addEventListener('scroll', toggleNav);
+document.addEventListener('scroll', initCallback());
