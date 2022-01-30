@@ -18,7 +18,6 @@ nav {
   padding: 0 1.5rem 0 1.125rem;
   background: var(--light-blue);
   transition: transform 0.4s;
-  /* to always stay on top of inserted images */
   z-index: 2;
 }
 
