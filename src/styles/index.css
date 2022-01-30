@@ -26,15 +26,6 @@ nav {
   transform: translateY(-4rem);
 }
 
-.heading {
-  font: 700 1.5rem 'Montserrat', sans-serif;
-  color: var(--dark-blue);
-}
-
-.heading-span {
-  color: var(--nav-links);
-}
-
 .nav-list {
   display: flex;
   flex-direction: row;
@@ -77,7 +68,7 @@ nav {
 }
 
 .section-heading {
-  font: 1.125rem 'Montserrat', sans-serif;
+  font: 600 1.125rem 'Montserrat', sans-serif;
   color: var(--heading);
 }
 
@@ -154,7 +145,7 @@ nav {
 }
 
 .newsletter-heading {
-  font: 1rem 'Montserrat', sans-serif;
+  font: 500 1rem 'Montserrat', sans-serif;
   text-align: center;
   margin-bottom: 1rem;
   color: var(--heading);
