@@ -78,6 +78,24 @@ const slideCover = (coverImages, btns) => {
 };
 
 const coverSlideshow = () => {
+  function btnCb(e) {
+    const clickedBtn = e.target;
+    if (clickedBtn.classList.contains('active-cover-btn')) return;
+
+    clearInterval(intervalID);
+    intervalID = setInterval(slideCover, 5000, coverImages, slideShowBtns);
+
+    for (let i = 0; i < 3; i++) {
+      if (slideShowBtns.item(i) === clickedBtn) {
+        coverImages.item(i).classList.remove('hidden');
+      } else {
+        slideShowBtns.item(i).classList.remove('active-cover-btn');
+        coverImages.item(i).classList.add('hidden');
+      }
+    }
+    clickedBtn.classList.add('active-cover-btn');
+  }
+
   const mql = window.matchMedia('(min-width: 834px)');
   const coverImages = document.querySelectorAll(
     '.cover-figure, .secondary-cover-figure'
@@ -88,6 +106,9 @@ const coverSlideshow = () => {
   if (!mql.matches) {
     intervalID = setInterval(slideCover, 5000, coverImages, slideShowBtns);
     slideshowPrep(false, coverImages, slideShowBtns);
+    slideShowBtns.forEach((btn) => {
+      btn.addEventListener('click', btnCb);
+    });
   }
 
   mql.addEventListener('change', (e) => {
@@ -97,6 +118,9 @@ const coverSlideshow = () => {
     } else {
       intervalID = setInterval(slideCover, 5000, coverImages, slideShowBtns);
       slideshowPrep(false, coverImages, slideShowBtns);
+      slideShowBtns.forEach((btn) => {
+        btn.addEventListener('click', btnCb);
+      });
     }
   });
 };
