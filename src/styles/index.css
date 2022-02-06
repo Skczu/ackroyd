@@ -201,10 +201,36 @@ nav {
   cursor: pointer;
 }
 
+.newsletter-button:disabled {
+  cursor: default;
+}
+
 .newsletter-subscribe {
   font: 0.625rem 'Lato', sans-serif;
   color: var(--subscribe-text);
   padding-left: 1rem;
+}
+
+.newsletter-toast {
+  position: fixed;
+  z-index: 3;
+  left: 1rem;
+  bottom: 1rem;
+  min-width: 8rem;
+  min-height: 2rem;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  font: 1rem 'Lato', sans-serif;
+  transition: opacity 800ms, visibility 800ms;
+}
+
+.toast-success {
+  background: var(--success);
+}
+
+.toast-error {
+  background: var(--error);
 }
 
 .footer {
@@ -226,7 +252,6 @@ nav {
 .author {
   color: var(--light-blue);
   margin: 1rem 0;
-  font-size: 1.25rem;
   font: 0.875rem 'Lato', sans-serif;
 }
 

@@ -125,7 +125,7 @@ const coverSlideshow = () => {
   });
 };
 
-const index = async () => {
+const initCover = async () => {
   const coverSection = document.querySelector('.cover-container');
   const secondaryCoverSection = document.querySelector(
     '.secondary-cover-container'
@@ -146,4 +146,4 @@ const index = async () => {
   coverSlideshow();
 };
 
-index();
+initCover();
