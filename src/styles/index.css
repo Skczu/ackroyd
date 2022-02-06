@@ -1,0 +1,488 @@
+body {
+  background: var(--background);
+}
+
+p {
+  font: 1rem/1.5rem 'Lato', sans-serif;
+  color: var(--paragraph);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 4rem;
+  width: 100%;
+  padding: 0 1.5rem 0 1.125rem;
+  background: var(--light-blue);
+  transition: transform 0.4s;
+  z-index: 2;
+}
+
+.nav-hidden {
+  transform: translateY(-4rem);
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height: 100%;
+  list-style: none;
+}
+
+.nav-li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-bottom: 0.25rem solid transparent;
+}
+
+.nav-active-link {
+  border-bottom: 0.25rem solid var(--nav-links);
+}
+
+.nav-item {
+  color: var(--nav-links);
+  text-decoration: none;
+  font: 0.75rem 'Lato', sans-serif;
+}
+
+.main {
+  padding: 5.5rem 1.5rem 0;
+}
+
+.primary-section,
+.secondary-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-heading {
+  font: 600 1.125rem 'Montserrat', sans-serif;
+  color: var(--heading);
+}
+
+.primary-section .section-heading {
+  font-size: 1.25rem;
+}
+
+.content-seperator {
+  height: 2px;
+  width: 8rem;
+  margin: 0.375rem 0 0.5rem;
+  background: var(--seperator);
+}
+
+.cover-container {
+  position: relative;
+}
+
+.cover-figure,
+.secondary-cover-figure {
+  transition: opacity 400ms, visibility 400ms;
+}
+
+.secondary-cover-figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cover,
+.secondary-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.7 / 1;
+  background: var(--image);
+}
+
+.cover-caption {
+  background-color: var(--heading);
+  color: var(--background);
+  font: 0.625rem/0.75rem 'Lato', sans-serif;
+  padding: 0.125rem;
+  text-align: center;
+}
+
+.cover-btn-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  margin: 1rem auto 4rem;
+}
+
+.cover-btn {
+  height: 1rem;
+  width: 2.25rem;
+  background: var(--image);
+  border-radius: 0.25rem;
+  border: none;
+}
+
+.active-cover-btn {
+  background: var(--active-cover-btn);
+}
+
+.secondary-image {
+  aspect-ratio: 1.97 / 1;
+  margin-bottom: 1.5rem;
+  background: var(--image);
+}
+
+.newsletter-heading {
+  font: 500 1rem 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--heading);
+}
+
+.newsletter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  padding-bottom: 3rem;
+  background: var(--light-blue);
+}
+
+.newsletter-paragraph {
+  max-width: 20rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.newsletter-box {
+  display: flex;
+  height: 2.5rem;
+  width: 20.375rem;
+}
+
+.newsletter-input {
+  border: none;
+  border-radius: 0.375rem 0 0 0.375rem;
+  max-width: 14.25rem;
+  padding: 1rem;
+  background: var(--background);
+}
+
+.newsletter-input:focus {
+  outline: none;
+}
+
+.newsletter-input::placeholder {
+  font: 0.625rem 'Lato', sans-serif;
+}
+
+.newsletter-button {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  border: none;
+  border-radius: 0 0.375rem 0.375rem 0;
+  width: 6.125rem;
+  background: var(--subscribe-button);
+  cursor: pointer;
+}
+
+.newsletter-button:disabled {
+  cursor: default;
+}
+
+.newsletter-subscribe {
+  font: 0.625rem 'Lato', sans-serif;
+  color: var(--subscribe-text);
+  padding-left: 1rem;
+}
+
+.newsletter-toast {
+  position: fixed;
+  z-index: 3;
+  left: 1rem;
+  bottom: 1rem;
+  min-width: 8rem;
+  min-height: 2rem;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  font: 1rem 'Lato', sans-serif;
+  transition: opacity 800ms, visibility 800ms;
+}
+
+.toast-success {
+  background: var(--success);
+}
+
+.toast-error {
+  background: var(--error);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.25rem 0 8rem;
+  background: #152b79;
+}
+
+.social-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.author {
+  color: var(--light-blue);
+  margin: 1rem 0;
+  font: 0.875rem 'Lato', sans-serif;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-link {
+  font: 0.625rem 'Lato', sans-serif;
+  color: var(--footer-links);
+  text-decoration: underline;
+}
+
+/* Tablet dimensions */
+@media only screen and (min-width: 834px) {
+  nav {
+    justify-content: center;
+    gap: 32.5rem;
+    padding: 0 4rem;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7rem 4rem 3rem;
+  }
+
+  .primary-section,
+  .secondary-section {
+    margin-bottom: 5rem;
+  }
+
+  .primary-section .section-heading {
+    font-size: 1.375rem;
+  }
+
+  .section-content {
+    max-width: 21.77rem;
+  }
+
+  .primary-section .section-content {
+    max-width: 29.25rem;
+  }
+
+  .content-seperator {
+    margin: 0.5rem 0 0.5rem;
+  }
+
+  .primary-section .content-seperator {
+    width: 9rem;
+  }
+
+  .section-paragraph {
+    line-height: 1.75rem;
+  }
+
+  .cover-container {
+    aspect-ratio: unset;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    height: 17.125rem;
+    width: 44.125rem;
+    margin-bottom: 5rem;
+  }
+
+  .cover-btn-container {
+    display: none;
+  }
+
+  .secondary-cover-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .cover {
+    width: 29.25rem;
+    height: 16.125rem;
+  }
+
+  .cover-caption {
+    padding: 0.25rem;
+  }
+
+  .secondary-cover {
+    aspect-ratio: unset;
+  }
+
+  .secondary-cover-figure {
+    position: static;
+  }
+
+  .secondary-cover-figure .cover-caption {
+    display: none;
+  }
+
+  .secondary-cover {
+    height: 7.9375rem;
+    background: #e5e5e5;
+  }
+
+  .secondary-section {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .secondary-image {
+    aspect-ratio: unset;
+    margin: 0;
+    height: 19.5rem;
+    width: 20rem;
+  }
+
+  .newsletter-section {
+    padding: 2.25rem 16.25rem 4rem;
+  }
+
+  .newsletter-paragraph {
+    margin-bottom: 2rem;
+  }
+
+  .footer {
+    padding: 4.25rem 0 10rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  nav {
+    gap: 64.75rem;
+    padding: 0 6rem;
+  }
+
+  .nav-item {
+    font-size: 0.875rem;
+  }
+
+  .main {
+    padding: 8rem 6rem;
+  }
+
+  .primary-section {
+    flex-direction: row;
+    gap: 5rem;
+    margin-bottom: 9rem;
+  }
+
+  .secondary-section {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5rem;
+    margin-bottom: 6rem;
+  }
+
+  .section-heading {
+    font-size: 1.75rem;
+  }
+
+  .primary-section .section-heading {
+    font-size: 2rem;
+  }
+
+  .section-content {
+    max-width: 39rem;
+  }
+
+  .primary-section .section-content {
+    max-width: 34rem;
+  }
+
+  .section-paragraph {
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+  }
+
+  .content-seperator {
+    width: 12rem;
+    margin: 0.75rem 0 0.75rem;
+  }
+
+  .primary-section .content-seperator {
+    width: 13rem;
+  }
+
+  .cover-container {
+    flex-direction: column;
+    flex-grow: 1.15;
+    height: 35.25rem;
+    width: 39rem;
+    margin-bottom: unset;
+  }
+
+  .cover {
+    height: 21.75rem;
+    width: 100%;
+  }
+
+  .secondary-cover-container {
+    flex-direction: row;
+  }
+
+  .secondary-cover-figure {
+    flex-grow: 1;
+  }
+
+  .secondary-cover {
+    height: 10.9375rem;
+    width: 18.75rem;
+  }
+
+  .secondary-image {
+    height: 18.9375rem;
+    width: 34rem;
+  }
+
+  .newsletter-heading {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .newsletter-paragraph {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  .footer {
+    padding: 6rem 0 10rem;
+  }
+}
