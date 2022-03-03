@@ -1,0 +1,21 @@
+:root {
+  --nav-links: #3250bd;
+  --footer-links: #b3c1f4;
+  --light-blue: #e6ebfe;
+  --heading: #212121;
+  --paragraph: #383838;
+  --image: #e5e5e5;
+  --active-cover-btn: #a1a1a1;
+  --subscribe-button: #fec48a;
+  --subscribe-text: #571b0f;
+  --seperator: #f39130;
+  --background: #f5f5f5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
